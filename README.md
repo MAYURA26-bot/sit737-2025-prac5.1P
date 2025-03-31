@@ -15,7 +15,6 @@ This project Dockerises a simple calculator microservice built with **Node.js** 
 ### 1. Clone the project
 ```bash
 git clone https://github.com/MAYURA26-bot/sit737-2025-prac4.1P.git
-cd sit737-2025-prac5p
 ```
 
 ### 2. Build Docker Image
@@ -38,8 +37,6 @@ docker compose up
 ```bash
 docker ps
 # Get the container ID
-
-docker logs <container_id>
 ```
 
 ## Docker Hub Link
