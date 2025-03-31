@@ -1,33 +1,54 @@
-# Calculator Microservice
+# Dockerised Calculator Microservice
 
 ## Overview
-A simple calculator microservice built with **Node.js** and **Express.js** that supports basic arithmetic operations.
+This project Dockerises a simple calculator microservice built with **Node.js** and **Express.js**. It performs basic arithmetic operations through a web interface and includes logging and health checks.
 
 ## Features
-- Addition, Subtraction, Multiplication, and Division
-- User-friendly Web Interface
-- REST API for external integration
-- Error handling for invalid inputs and division by zero
-- Logging with Winston for debugging
+- Dockerfile and Docker Compose setup
+- Addition, Subtraction, Multiplication, Division
+- Winston-based logging
+- Health check with auto-restart
+- Exposed on port 3000
 
-## Setup Instructions
-1. **Install dependencies**:
-   npm install
-   
-3. **Start the server**:
-   node app.js
-   
-5. **Access the application**:
-   - Open [http://localhost:3000](http://localhost:3000) in your browser.
+## Getting Started
 
-## API Endpoints
-- **POST /add** - Adds two numbers
-- **POST /subtract** - Subtracts two numbers
-- **POST /multiply** - Multiplies two numbers
-- **POST /divide** - Divides two numbers (handles division by zero)
+### 1. Clone the project
+```bash
+git clone https://github.com/MAYURA26-bot/sit737-2025-prac4.1P.git
+cd sit737-2025-prac5p
+```
 
-## Logging
-- Logs are stored in `logs/combined.log` and `logs/error.log`.
+### 2. Build Docker Image
+```bash
+docker build -t mayura1994/5.1p-calculator-web-app
+```
+
+### 3. Run the Container
+```bash
+docker run -p 3000:3000 mayura1994/5.1p-calculator-web-app
+```
+Access the app at: [http://localhost:3000](http://localhost:3000)
+
+### 4. Run with Docker Compose
+```bash
+docker compose up
+```
+
+### 5. Check Container Logs
+```bash
+docker ps
+# Get the container ID
+
+docker logs <container_id>
+```
+
+## Docker Hub Link
+Image hosted at:  
+https://hub.docker.com/r/mayura1994/5.1p-calculator-web-app
+
+## GitHub Repository
+Code available at:  
+https://github.com/MAYURA26-bot/sit737-2025-prac5.1P
 
 ## License
 MIT License
